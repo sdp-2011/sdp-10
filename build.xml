@@ -1,0 +1,45 @@
+<project name="SDP10" basedir="." default="main">
+
+<property name="lib.dir" value="lib"/>	
+<property name="src.dir" value="src"/>
+<property name="bin.dir" value="bin"/>
+<property name="mainclass" value="Commander"/>
+
+	<!-- Defining the CLASSPATH -->
+	<path id="compile.classpath">
+		<pathelement location="${bin.dir}" />
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="${src.dir}"/>	
+	</path>
+	<path id="run.classpath">
+		<pathelement location="${bin.dir}" />
+		<fileset dir="${lib.dir}">
+			<include name="**/twitter4j-core-2.1.10.jar" />
+			<include name="**/pccomm.jar" />
+		</fileset>
+	</path>
+
+	<target name="clean">
+		<delete dir="${bin.dir}"/>
+	</target>
+
+	<target name="compile" depends="clean">
+		<mkdir dir="${bin.dir}"/>
+		<javac srcdir="${src.dir}" destdir="${bin.dir}" includeantruntime="true" debug="true" debuglevel="lines,source">
+			<classpath refid="compile.classpath"/>
+		</javac>
+	</target>
+		
+	<target name="run" depends="compile">
+		<java classname="Commander" fork="true">
+			<classpath refid="run.classpath"/>
+		</java>
+	</target>
+
+	<target name="clean-build" depends="clean, compile"/>
+	<target name="main" depends="clean-build"/>
+
+</project> 
+

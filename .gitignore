@@ -1,0 +1,9 @@
+.DS_Store
+*.pyc
+*.class
+*.nxj
+.pydevproject
+.project
+.classpath
+*.swp
+bin/
