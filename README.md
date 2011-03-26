@@ -1,4 +1,4 @@
-tewie Bot - Team Family Geeks : System Design Project 2011 
+Stewie Bot - Team Family Geeks : System Design Project 2011 
 ===========================================================
 
 ## Members:
