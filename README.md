@@ -1,51 +1,48 @@
 Stewie Bot - Team Family Geeks : System Design Project 2011 
 ===========================================================
 
-This is the project page of a Lego Mindstorm robot that plays football. The robot gets information about the surrounding environment through sensors and a camera which is placed on top of a pitch. The vision system developed in OpenCV processes the feed from the camera giving the robot information about the different objects that reside in the pitch. The opponent robot, and a ball. The goal of the robot is to avoid the oponnent robot, take control of the ball and score in the opponents goal.
+This is the code repo for Team 10's SDP Project 2010/11, who's robot 
+was named Stewie. Using a camera situated on top of the pitch, objects
+are identified using the OpenCV Python library, then fed into the java
+system by a TCP socket.
 
 ## Members:
 
 * Maxim Cramer
-* Daniel Stanoescu
-* Alex Shearn
-* Alessandro La Bianca
 * Diana Bicazan
 * Denes Findrik
+* Alex Gouvatsos
+* Alessandro La Bianca
 * Ewan Leaver
+* Alex Shearn [shearn89@github](http://github.com/shearn89)
+* Daniel Stanoescu
 * Peter Walsh
 * Chenyang Xia
-* Alex Gouvatsos
 
-Superviser: Dominik Glodzik
+Supervisor: Dominik Glodzik
 
-## Instalatation Requirements
+## Installation Requirements
 
-- Lejos: http://lejos.sourceforge.net/ - in order to compile the code and connect to the bot and issue commands
-- OpenCV: http://opencv.willowgarage.com/wiki/ - so you can process the camerea feed
+- [Lejos](http://lejos.sourceforge.net/) - in order to compile the code and connect to the bot and issue commands
+- [OpenCV](http://opencv.willowgarage.com/wiki/) - so you can process the camerea feed
 
 ## Programming Languages Used
 
 - Java
 - Python
-- LeJos (Java for the Mindstorm NXT brick)
 
-## How To Run:
+## Usage
 
 1. Grab a terminal.
+2. Compile and link all the Java packages: `ant`
+3. Connect to the robot: `./run_me.sh`
+4. Grab another terminal, and run the vision system: `cd src/vision/`
+    - `python merge.py <t-shape color> <0-1 for pitch selection>`
+5. Watch your robot win, or have a :beer:
 
-2. Compile and link all the Java packages:
+## Awesome features
 
-- `ant`
-
-3. Connect to the robot and wait for the vision client to connect:
-
-- `./run_me.sh`
-
-4. Grab another terminal. And run the vision system:
-
-- `cd src/vision/`
-- `python merge.py <t-shape color> <0-1 for pitch selection>`
-
-5. Have fun!
-
-
+- He tweets, if set up correctly for a different twitter account (you'll have to get your own API key).
+- He has a nifty pause interface, allowing you to pick him up easily.
+- He has a penalty defense mode.
+- He's awesome.
