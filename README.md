@@ -37,7 +37,7 @@ Supervisor: Dominik Glodzik
 2. Compile and link all the Java packages: `ant`
 3. Connect to the robot: `./run_me.sh`
 4. Grab another terminal, and run the vision system: `cd src/vision/`
-    - `python merge.py <t-shape color> <0-1 for pitch selection>`
+    - `python merge.py <t-shape color> <0-1 for pitch selection> <java server IP> <anything for debug on>`
 5. Watch your robot win, or have a :beer:
 
 ## Awesome features
