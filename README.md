@@ -15,7 +15,7 @@ system by a TCP socket.
 * Alessandro La Bianca
 * Ewan Leaver
 * Alex Shearn [shearn89@github](http://github.com/shearn89)
-* Daniel Stanoescu
+* Daniel Stanoesc [inquire@github](http://github.com/inquire)
 * Peter Walsh
 * Chenyang Xia
 
